@@ -1,0 +1,25 @@
+# Guide to Recreate Visionxaid Environment
+
+## 1. Create a virtual environment
+cd C:\Users\Admin\Desktop\Visionxaid
+python -m venv tensorflow_env
+
+## 2. Activate the environment
+.\tensorflow_env\Scripts\activate
+
+## 3. Upgrade pip, setuptools, wheel
+python -m pip install --upgrade pip setuptools wheel
+
+## 4. Install all required packages
+pip install -r requirements.txt
+
+## 5. Register the environment as a Jupyter kernel
+python -m ipykernel install --user --name=tensorflow_env --display-name "Python (tensorflow_env)"
+
+## 6. Select the environment in VS Code
+- Open VS Code
+- Press Ctrl+Shift+P → "Python: Select Interpreter"
+- Enter interpreter path → browse to:
+  C:\Users\Admin\Desktop\Visionxaid\tensorflow_env\Scripts\python.exe
+- Open your .ipynb file
+- Choose Kernel → Python (tensorflow_env)
